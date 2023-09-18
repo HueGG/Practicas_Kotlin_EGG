@@ -1,7 +1,7 @@
-const val PI = 3.1416
+const val PI = 3.1416f
 fun main(args: Array<String>) {
     //Para un número decimal, ¿Qué tipo de dato se asigna por defecto? Imprimirlo
-    val numero_decimal = 3.1416
+    val numero_decimal = 15f
     println("El tipo de dato es: ${numero_decimal::class.simpleName}")
     println("Su valor es: $numero_decimal")
     //Volver un valor Double a flotante. Se coloca una f al final del numero
@@ -14,6 +14,8 @@ fun main(args: Array<String>) {
     println("Valor de nuevoFlotante es: $nuevoFlotante")
     //Declarar una variable const val con el valor de PI
     //y multiplicarla por 2 veces nuestra variable decimal para sacar el perímetro de un círculo.
-    val perimetro = PI*(2*numero_decimal)
-    println("El perimetro del circulo es: $perimetro")
+    println("El perimetro del circulo es: ${Perimetro(numero_decimal)}")
+}
+fun Perimetro(numero_decimal:Float): Float {
+    return PI * (2 * numero_decimal)
 }
