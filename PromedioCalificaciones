@@ -1,0 +1,27 @@
+import kotlin.math.round
+
+fun main() {
+    println("Ingrese la primera calificación:")
+    val calif1 = readLine()?.toInt() ?: 0
+
+    println("Ingrese la segunda calificación:")
+    val calif2 = readLine()?.toInt() ?: 0
+
+    println("Ingrese la tercera calificación:")
+    val calif3 = readLine()?.toInt() ?: 0
+
+    val promedio = CalcularPromedio(calif1, calif2, calif3)
+    println("El promedio de las calificaciones es: $promedio")
+}
+
+fun CalcularPromedio(calif1: Int, calif2: Int, calif3: Int): Double {
+    val promedio = (calif1 + calif2 + calif3) / 3.0
+
+    // Redondear el promedio según las restricciones
+    val promedioRedondeado = when {
+        promedio < 6.0 -> promedio.toInt().toDouble()  // Redondear hacia abajo si es menor a 6
+        promedio >= 6.0 -> round(promedio).toDouble()  // Redondear hacia arriba si es mayor o igual a 6
+        else -> promedio
+    }
+    return "%.2f".format(promedioRedondeado).toDouble()
+}
