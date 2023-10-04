@@ -1,0 +1,21 @@
+fun main() {
+
+    val lado_1 = 57
+    val lado_2 = 6
+    val lado_3 = 5
+
+    val tipo = tipoDeTriangulo(lado_1, lado_2, lado_3)
+    println("Es un $tipo")
+}
+/*Funcion que recibe tres parametros enteros (Lados dell triangulo) y retorna un mensaje*/
+fun tipoDeTriangulo(lado_1: Int, lado_2: Int, lado_3: Int): String {
+    //Comparacon de lados
+    if (lado_1 == lado_2 && lado_2 == lado_3) {
+        return "Todoso los lados son iguales. Es un: Triángulo Equilátero."
+    } else if (lado_1 == lado_2 || lado_2 == lado_3 || lado_3 == lado_1) {
+        return "Solo dos lados son iguales. Es un: Triángulo Isósceles."
+    } else {
+        return "Ningun lado es igual. Es un triángulo escaleno."
+
+    }
+}
