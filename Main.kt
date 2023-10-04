@@ -1,12 +1,14 @@
-/**
- * UPIICSA
- * Progrmación Móvil
- * Grupo 6NM61
- * Práctica 01 Alternativa Online para Testeo Rapido
- * Eduardo
- */
-fun main(args: Array<String>) {
-    print("Hello, UPIICSA")
-    println(" Bienvenido")
-    println("Programación movil con Kotlin")
+fun main() {
+    val input: Any = "Eduardo"
+    tipoDato(input)
+}
+
+fun tipoDato(input: Any) {
+    when (input) {
+        is Int -> println("El dato ingresado es un número entero.")
+        is Double -> println("El dato ingresado es un número decimal.")
+        is String -> println("El dato ingresado es una cadena de texto.")
+        is Boolean -> println("El dato ingresado es un valor booleano.")
+        else -> println("Tipo de dato desconocido")
+    }
 }
