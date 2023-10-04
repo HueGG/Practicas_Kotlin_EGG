@@ -1,0 +1,15 @@
+fun main(){
+    //Declaracion de variables
+    val x1 = 4.0
+    val x2 = -3.0
+    val y1 = 3.0
+    val y2 = -2.0
+    val m:Double = calcularPendiente(x1,x2,y1,y2)
+    println("El valor de la pendiente entre P1($x1,$y1), P2($x2,$y2) es: $m")
+
+}
+//Función para la pendiente que recibe 4 parametros tipo Double y retorna un Double
+fun calcularPendiente(x1: Double, x2:Double, y1:Double,y2:Double):Double {
+    //val m:Double =
+    return (y2-y1)/(x2-x1)
+}
