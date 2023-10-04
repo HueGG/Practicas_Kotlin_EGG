@@ -1,0 +1,22 @@
+fun main() {
+    //Variables para los lados del rectangulo
+    //Los datos son de tipo double
+    val largo = 15.0
+    val ancho = 4.0
+    // Valor para calcular el volumen del prisma
+    val altura = 9.0
+    //Llamada a función con retorno de un Double que devuelve el área del rectangulo
+
+    println("El área del rectángulo es: ${AreaRectangulo(largo, ancho)}")
+    println("El volumen del prisma rectangular es: ${VolumenRectangulo(AreaRectangulo(largo, ancho), altura)}")
+}
+
+// Area del rectángulo
+fun AreaRectangulo(largo: Double, ancho: Double): Double {
+    return largo * ancho
+}
+
+// Volumen del prisma rectangular
+fun VolumenRectangulo(AreaRectangulo: Double, altura: Double): Double {
+    return AreaRectangulo*altura
+}
